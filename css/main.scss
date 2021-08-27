@@ -1,0 +1,118 @@
+@import "variables";
+@import "mixins";
+
+body{
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: $Very-light-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(mobile){
+        margin: 15px 0;
+        height: unset;
+    }
+}
+
+.container{
+    width: 61.7%;
+    min-width: 700px;
+    height: auto;
+    color: white;
+    display: flex;
+
+    @include responsive(mobile){
+        flex-direction: column;
+        min-width: unset;
+        width: 90%;
+    }
+}
+
+.card{
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    position: relative;
+
+    &__content{
+        min-height: 404px;
+        margin-left: 15%;
+        margin: 48px 15.5%;
+
+        @include responsive(mobile){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1{
+            font-family: 'Big Shoulders Display', sans-serif;
+            font-size: 2.5rem;
+            margin: 2rem 0 0;
+        }
+        
+        p{
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6rem;
+            max-width: 210px;
+            margin: 1.6rem 0 0 0;
+        }
+        
+        .btn{
+            position: absolute;
+            bottom: 46px;
+            background-color: white;
+            padding: 16px 31px;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: $Dark-cyan;
+        }
+    }
+    
+    
+    
+    
+    &:nth-child(1){
+        background-color: $Bright-orange;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+        @include responsive(mobile){
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 10px;
+        }
+
+        .btn{
+            color: $Bright-orange;
+            @include btn-hover;
+        }
+    }
+    
+    &:nth-child(2){
+        background-color: $Dark-cyan;
+        
+        .btn{
+            color: $Dark-cyan;
+            @include btn-hover;
+        }
+    }
+    &:nth-child(3){
+        background-color: $Very-dark-cyan;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        
+        @include responsive(mobile){
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .btn{
+            color: $Very-dark-cyan;
+            @include btn-hover;
+        }
+    }
+    
+}

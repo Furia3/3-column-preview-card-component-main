@@ -1,0 +1,124 @@
+body {
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  body {
+    margin: 15px 0;
+    height: unset;
+  }
+}
+
+.container {
+  width: 61.7%;
+  min-width: 700px;
+  height: auto;
+  color: white;
+  display: flex;
+}
+@media screen and (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    min-width: unset;
+    width: 90%;
+  }
+}
+
+.card {
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  position: relative;
+}
+.card__content {
+  min-height: 404px;
+  margin-left: 15%;
+  margin: 48px 15.5%;
+}
+@media screen and (max-width: 750px) {
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.card__content h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem 0 0;
+}
+.card__content p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6rem;
+  max-width: 210px;
+  margin: 1.6rem 0 0 0;
+}
+.card__content .btn {
+  position: absolute;
+  bottom: 46px;
+  background-color: white;
+  padding: 16px 31px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #006970;
+}
+.card:nth-child(1) {
+  background-color: #e38826;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media screen and (max-width: 750px) {
+  .card:nth-child(1) {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
+.card:nth-child(1) .btn {
+  color: #e38826;
+}
+.card:nth-child(1) .btn:hover {
+  background-color: unset;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 31px;
+}
+.card:nth-child(2) {
+  background-color: #006970;
+}
+.card:nth-child(2) .btn {
+  color: #006970;
+}
+.card:nth-child(2) .btn:hover {
+  background-color: unset;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 31px;
+}
+.card:nth-child(3) {
+  background-color: #004241;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media screen and (max-width: 750px) {
+  .card:nth-child(3) {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.card:nth-child(3) .btn {
+  color: #004241;
+}
+.card:nth-child(3) .btn:hover {
+  background-color: unset;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 31px;
+}
+
+/*# sourceMappingURL=styles.css.map */

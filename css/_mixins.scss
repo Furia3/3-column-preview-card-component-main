@@ -1,0 +1,15 @@
+@mixin btn-hover {
+    &:hover{
+        background-color: unset;
+        color: white;
+        border: 2px solid white;
+        padding: 14px 31px;
+    }
+    
+}
+
+@mixin responsive($value){
+    @media screen and (max-width:(map-get($breakpoints, $value))){
+        @content
+    }
+}
